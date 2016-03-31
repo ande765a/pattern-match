@@ -16,7 +16,7 @@ const search$ = patternMatch(
   [1, 2, 3, 4, 5, 6, 7, 8],
 
   // Gap Penalty Function
-  k => -2 * k,
+  k => -1 * k,
 
   // Similarity function
   (a, b) => a == b ? 2 : -1
@@ -24,8 +24,8 @@ const search$ = patternMatch(
 
 search$.subscribe(console.log)
 
-// ---- [ { i: 0, j: 3 } ]
-// ------------------[ { i: 1, j: 4 }, { i: 0, j: 3 } ]
+// ---- [ { j: 0, i: 3 ... } ]
+// ------------------[ { j: 1, i: 4 ... }, { j: 0, i: 3 ... } ]
 
 
 ```
